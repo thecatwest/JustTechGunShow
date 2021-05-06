@@ -33,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use(require('./controllers/'));
 
+//waiting on db 
 // sequelize.sync({ force: false }).then(() => {
 //     app.listen(PORT, () => console.log('Now listening'));
 //   });
