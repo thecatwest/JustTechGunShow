@@ -1,5 +1,6 @@
 // import all models
-
+const User = require('./User');
+conts Post = require('./Post'); 
 
 // create association 
 
@@ -11,3 +12,4 @@
 
 
 // export all models 
+module.exports = { User, Post };
