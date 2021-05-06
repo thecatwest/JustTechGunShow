@@ -13,6 +13,9 @@ require('dotenv').config();
 //       port: 3306
 //     });
 
+// app.listen(PORT, () => {
+//     console.log(`Server running on port ${PORT}`);
+//   });
 
 
 module.exports = sequelize;
