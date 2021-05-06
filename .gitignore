@@ -1,10 +1,6 @@
 node_modules
 .env 
-<<<<<<< HEAD
-./package-lock.json
-=======
 ./ package-lock.json
->>>>>>> bfd77bbe8adf74f21e02c96c8210d5a5a2bdafb1
 
 # what is the stuff below 
 # Logs

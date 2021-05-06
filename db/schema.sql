@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS gun_show;
+
+CREATE DATABASE gun_show;
