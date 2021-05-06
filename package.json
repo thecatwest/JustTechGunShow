@@ -1,12 +1,8 @@
 {
-  "name": "JustTechGunShow",
+  "name": "justtechgunshow",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "dependencies": {
-    "express-handlebars": "^5.3.1"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -15,11 +11,18 @@
     "type": "git",
     "url": "git+https://github.com/thecatwest/JustTechGunShow.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/thecatwest/JustTechGunShow/issues"
   },
-  "homepage": "https://github.com/thecatwest/JustTechGunShow#readme"
+  "homepage": "https://github.com/thecatwest/JustTechGunShow#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^9.0.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
 }
