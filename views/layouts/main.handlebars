@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
+  <title>Just Tech Gun Show</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
@@ -14,15 +14,26 @@
       <h1>
         <a href="/">Just Tech Gun Show</a>
       </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+      </nav>
     </header>
     <main>
       {{{ body }}}
     </main>
     <footer>
-      Thanks for coming to The Gun Show!
+      Thanks for coming to the Gun Show!
     </footer>
   </div>
-
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
