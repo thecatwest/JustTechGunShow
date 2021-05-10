@@ -14,8 +14,9 @@ const bcrypt = require('bcrypt');
 class User extends Model {
     // if we end up using bcrypt uncomment below 
        // set up method to run on instance data (per user) to check password 
-    //    checkPassword(loginPw){
-    //     return bcrypt.compareSync(loginPw, this.password);
+       checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+    }
 }
 
 //define table columns and configuration 
@@ -58,19 +59,19 @@ User.init(
     }
 },
 {   
-    //if we end up using bcrypt uncomment below 
-    // hooks: {
-    //     // set up beforeCreate lifecycle "hook" functionality
-    //     async beforeCreate(newUserData) {
-    //         newUserData.password = await bcrypt.hash(newUserData.password, 10);
-    //         return newUserData;
-    //     },
-    //     // set up beforeUpdate lifecycle "hook" functionality
-    //     async beforeUpdate(updatedUserData) {
-    //         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-    //         return updatedUserData;
-    //     }
-    // },
+    // bycrpt hooks to  hash password on creation or update
+    hooks: {
+        // set up beforeCreate lifecycle "hook" functionality
+        async beforeCreate(newUserData) {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+        },
+        // set up beforeUpdate lifecycle "hook" functionality
+        async beforeUpdate(updatedUserData) {
+            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+            return updatedUserData;
+        }
+    },
 
     // pass in our imported sequelize connection (the direct connection to our database)
     sequelize,
