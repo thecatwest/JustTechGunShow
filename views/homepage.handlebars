@@ -1,1 +1,7 @@
-<div>You are on the Just Tech Gun Show homepage</div>
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
+</ol>

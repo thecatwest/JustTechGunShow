@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const {User, Post, Comment} = require('../../models/User');
-const { use } = require('../home-routes');
 
 router.get('/', (req, res) => {
     User.findAll({
@@ -26,7 +25,7 @@ router.get('/:id', (req, res) => {
             },
             {
                 model: Comment,
-                //attributes from comment mdoel
+                //attributes from comment model
             }
         ]
     })
