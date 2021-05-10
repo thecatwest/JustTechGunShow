@@ -1,3 +1,4 @@
+{{!-- form to create new post --}}
 <section>
   <h2>Create New Workout Post</h2>
 
@@ -7,21 +8,22 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+      <label for="post-text">Describe your workout</label>
+      <input id="post-text" name="post-text" />
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button type="submit" class="btn">Create Workout Post</button>
   </form>
 </section>
 
+{{!-- if user has posts, display posts with option to edit --}}
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2>Your Workout Posts</h2>
   <ol>
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit this post</a>
     </li>
     {{/each}}
   </ol>
