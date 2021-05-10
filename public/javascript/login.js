@@ -1,5 +1,5 @@
 // event listener for submit event from signup form
-async function signupFormHandler(event) {
+async function signupFormEventHandler(event) {
   event.preventDefault();
 
   const username = document.querySelector("#username-signup").value.trim();
@@ -20,7 +20,7 @@ async function signupFormHandler(event) {
 
     // check response status
     if (response.ok) {
-      console.log('success');
+      console.log('successful');
     //   unsuccessful response triggers error
     } else {
       alert(response.statusText);
@@ -29,7 +29,7 @@ async function signupFormHandler(event) {
 }
 
 // event listener for login event from login form
-async function loginFormHandler(event) {
+async function loginFormEventHandler(event) {
     event.preventDefault();
   
     const email = document.querySelector('#email-login').value.trim();
@@ -53,4 +53,6 @@ async function loginFormHandler(event) {
     }
   }
   
-  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+  document.querySelector('.signup-form').addEventListener('submit', signupFormEventHandler);
+
+  document.querySelector('.login-form').addEventListener('submit', loginFormEventHandler);

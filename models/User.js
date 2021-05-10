@@ -1,14 +1,14 @@
-// import all the lthings 
+// import all the things 
 // bcrypt 
-// sequlize re files config 
+// sequelize re files config 
 
 // create user model 
 
-//define table colums and configuration 
+//define table columns and configuration 
 
 const { Model, DataTypes} = require('sequelize'); 
 const sequelize = require('../config/connection');
-// if we used somthing other than bcrypt for passworkd take below out
+// if we used something other than bcrypt for password take below out
 const bcrypt = require('bcrypt');
 
 class User extends Model {
@@ -18,7 +18,7 @@ class User extends Model {
     //     return bcrypt.compareSync(loginPw, this.password);
 }
 
-//define table colums and configuration 
+//define table columns and configuration 
 User.init(
 {
     id: {
@@ -58,7 +58,7 @@ User.init(
     }
 },
 {   
-    //if we end up using bycrypt uncomment below 
+    //if we end up using bcrypt uncomment below 
     // hooks: {
     //     // set up beforeCreate lifecycle "hook" functionality
     //     async beforeCreate(newUserData) {

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech Gun Show</title>
+  <title>Gun Show</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
@@ -12,7 +12,7 @@
   <div class="wrapper">
     <header>
       <h1>
-        <a href="/">Just Tech Gun Show</a>
+        <a href="/">Gun Show</a>
       </h1>
       <nav>
         {{#if loggedIn}}
@@ -20,6 +20,8 @@
         <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
         <a href="/login">Login</a>
+        {{!-- use button for logout because will not navigate to page --}}
+        <button id="logout" class="btn-no-style">Logout</button>
         {{/if}}
       </nav>
     </header>
@@ -31,7 +33,9 @@
     </footer>
   </div>
   
+  {{!-- if user is logged in, then can logout --}}
   {{#if loggedIn}}
+  {{!-- link logout.js to main.hbs --}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>
