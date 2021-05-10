@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
             },
             {
                 model: Comment,
-                //attributes from comment mdoel
+                //attributes from comment model
             }
         ]
     })
