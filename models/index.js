@@ -38,13 +38,13 @@ Comment.belongsTo(User, {
   });
 
 //category 
-Category.hasMany(Post, {
-    foreignKey: 'post_id'
-}); 
+// Category.hasMany(Post, {
+//     foreignKey: 'category_id'
+// }); 
 
-Post.belongsTo(Category, {
-    foreignKey: 'category_id'
-});
+// Post.belongsTo(Category, {
+//     foreignKey: 'category_id'
+// });
 
 
 // export all models 
