@@ -59,7 +59,7 @@ User.init(
     }
 },
 {   
-    // bycrpt hooks to  hash password on creation or update
+    // bcrypt hooks to  hash password on creation or update
     hooks: {
         // set up beforeCreate lifecycle "hook" functionality
         async beforeCreate(newUserData) {

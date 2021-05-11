@@ -15,10 +15,15 @@
         <a href="/">Gun Show</a>
       </h1>
       <nav>
+        {{!-- if user is logged in --}}
         {{#if loggedIn}}
+        {{!-- then, show dashboard link --}}
         <a href="/dashboard">Dashboard</a>
+        {{!-- and show logout button/link --}}
         <button id="logout" class="btn-no-style">Logout</button>
+        {{!-- if user is not logged in --}}
         {{else}}
+        {{!-- show login link --}}
         <a href="/login">Login</a>
         {{!-- use button for logout because will not navigate to page --}}
         <button id="logout" class="btn-no-style">Logout</button>
@@ -32,10 +37,12 @@
       Thanks for coming to the Gun Show!
     </footer>
   </div>
-  
+
   {{!-- if user is logged in, then can logout --}}
   {{#if loggedIn}}
   {{!-- link logout.js to main.hbs --}}
+  {{!-- can pass variables to other view templates because all variables
+  passed into view templates are also passed to main --}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>

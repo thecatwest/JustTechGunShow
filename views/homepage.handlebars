@@ -1,6 +1,7 @@
 <ol class="post-list">
   {{#each posts as |post|}}
   <li>
+    {{!-- use partial to pull data from post-info.hbs post --}}
     {{> post-info post }}
   </li>
   {{/each}}

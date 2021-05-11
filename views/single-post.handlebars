@@ -1,3 +1,4 @@
+{{!-- use partial to pull data from post-info.hbs post --}}
 {{> post-info post}}
 
 {{#if loggedIn}}
@@ -7,15 +8,16 @@
   </div>
 
   <div>
+    {{!-- add category dropdown here --}}
     <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
   </div>
 </form>
 {{/if}}
 
+{{!-- import partial for comments --}}
 {{> comments post.comments}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
+<script src="/javascript/category.js"></script>
 {{/if}}
