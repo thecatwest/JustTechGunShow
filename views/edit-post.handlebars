@@ -1,7 +1,7 @@
 <article>
   <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
-    Edit Post
+    Edit Workout Post
   </h2>
   <form class="edit-post-form">
     <div>
@@ -20,6 +20,7 @@
   </form>
 </article>
 
+{{!-- display for for adding new, and listing current, comments --}}
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
@@ -30,8 +31,10 @@
   </div>
 </form>
 
+{{!-- use comments partial to display comments --}}
 {{> comments post.comments}}
 
+{{!-- link front-end JS files --}}
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
