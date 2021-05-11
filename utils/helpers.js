@@ -5,15 +5,6 @@ module.exports = {
         date
       ).getDate()}/${new Date(date).getFullYear()}`;
     },
-    // url format
-    format_url: (url) => {
-      return url
-        .replace("http://", "")
-        .replace("https://", "")
-        .replace("www.", "")
-        .split("/")[0]
-        .split("?")[0];
-    },
     // plural words format
     format_plural: (word, amount) => {
         // if count is greater than one

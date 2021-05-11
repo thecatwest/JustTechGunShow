@@ -1,12 +1,17 @@
-{{!-- workout posts --}}
+{{! workout posts }}
 <article class="post">
   <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
-    <span>({{format_url post_url}})</span>
+    {{! post title }}
+    <h3>{{title}}</h3>
+    <p>{{content}}</p>
   </div>
   <div class="meta">
-    Created by {{user.username}} on {{format_date created_at}}
+    Created by
+    {{user.username}}
+    on
+    {{format_date created_at}}
     |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <a href="/post/{{id}}">{{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
   </div>
 </article>
