@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
     .then(postData => {
       // map out all posts and serialize them to be formatted
       const posts = postData.map(post => post.get({ plain: true }));
-      // call homepage handlebard template and send post data
+      // call homepage handlebars template and send post data
       res.render('homepage',  {
         posts,
         loggedIn: req.session.loggedIn
