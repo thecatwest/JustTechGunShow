@@ -46,7 +46,8 @@ async function loginFormEventHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        // after login, automatically redirect user to dashboard
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
