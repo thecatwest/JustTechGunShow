@@ -16,12 +16,9 @@ Post.init(
           type: DataTypes.STRING,
           allowNull: false
       },
-      post_url: {
+      contents: {
           type: DataTypes.STRING,
-          allowNull: false,
-          validate: {
-              isUrl: true
-          }
+          allowNull: false
       },
       user_id: {
           type: DataTypes.INTEGER,
@@ -29,14 +26,6 @@ Post.init(
           references: {
               model: 'user',
               key: 'id'
-          }
-      },
-      category_id: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          references: {
-            model: 'category',
-            key: 'id'
           }
       }
   },
