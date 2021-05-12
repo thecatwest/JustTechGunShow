@@ -22,17 +22,6 @@
   </form>
 </article>
 
-{{!-- display for for adding new, and listing current, comments --}}
-<form class="comment-form px-4 mx-2 pt-5">
-  <div>
-    <textarea name="comment-body" cols="50" rows="7"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add new comment</button>
-  </div>
-</form>
-
 {{!-- use comments partial to display comments --}}
 {{> comments post.comments}}
 
