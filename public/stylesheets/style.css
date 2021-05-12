@@ -1,0 +1,47 @@
+* {
+    color: #14213D;
+}
+
+header {
+    background-color: #FCA311;
+}
+/* 
+nav {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+} */
+
+body {
+    background: #FFFFFF;
+    /* color: #14213D; */
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FCA311;
+    text-align: center;
+}
+
+.nav-link {
+    color: #14213D;
+}
+
+.btn {
+    background: #FCA311;
+    border: #14213D;
+    color: #14213D;
+}
+
+.hero {
+    background: #14213D;
+    color: #FFFFFF;
+}
+
+.hero-p {
+    color: #E5E5E5;
+}

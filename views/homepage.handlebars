@@ -1,8 +1,18 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    {{!-- use partial to pull data from post-info.hbs post --}}
-    {{> post-info post }}
-  </li>
-  {{/each}}
-</ol>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img" src="https://placebear.com/640/360" alt="Fuzzy Wuzzy was a bear">
+        <div class="card-img-overlay"></div>
+          <ol class="post-list">
+            {{#each posts as |post|}}
+            <li>
+              {{!-- use partial to pull data from post-info.hbs post --}}
+              {{> post-info post }}
+            </li>
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+    </div>
+</div>
