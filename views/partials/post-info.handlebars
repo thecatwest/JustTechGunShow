@@ -1,46 +1,17 @@
 {{! workout posts }}
 <article class="post">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-        <div class="card">
-          <img
-            class="card-img"
-            src="https://placebear.com/640/360"
-            alt="Fuzzy Wussy was a bear"
-          />
-          <div class="card-img-overlay">
-            <a href="#" class="btn btn-light btn-sm">Category</a>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">{{title}}</h4>
-            {{!-- future development - add time and number of exercises --}}
-            {{!-- <small class="text-muted cat">
-              <i class="far fa-clock text-info"></i>
-              30 minutes
-              <i class="fas fa-users text-info"></i>
-              4 exercises
-            </small> --}}
-            <p class="card-text">{{content}}</p>
-            <a href="" class="btn btn-info">Read Post</a>
-          </div>
-          <div
-            class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
-            <div class="views">Created by
-              {{user.username}}
-              on
-              {{format_date created_at}}
-            </div>
-            <div class="stats">
-              <i class="far fa-comment"></i><a
-                href="/post/{{id}}"
-              >{{comments.length}}
-                {{format_plural "comment" comments.length}}</a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="title">
+    {{! post title }}
+    <h3>{{title}}</h3>
+    <p>{{content}}</p>
   </div>
-</article>
+  <div class="meta">
+    Created by
+    {{user.username}}
+    on
+    {{format_date created_at}}
+    |
+    <a href="/post/{{id}}">{{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
+  </div>
+</article
