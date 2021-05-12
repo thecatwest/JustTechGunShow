@@ -6,30 +6,21 @@
   <form class="edit-post-form">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
-      
+      <div>
+        <textarea name="post-text" value="{{post.contents}}" cols="50" rows="7"></textarea>
+      </div>
     </div>
     {{!-- TODO --}}
     {{!-- Change VOTES to CATEGORIES --}}
     {{!-- <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
       | --}}
-      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+      <a href="/post/{{id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+      <button type="submit">Save post</button>
+      <button type="button" class="delete-post-btn">Delete post</button>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
   </form>
 </article>
-
-{{!-- display for for adding new, and listing current, comments --}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add new comment</button>
-  </div>
-</form>
 
 {{!-- use comments partial to display comments --}}
 {{> comments post.comments}}
