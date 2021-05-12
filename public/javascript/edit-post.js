@@ -19,7 +19,7 @@ async function editFormEventHandler(event) {
   // if edit put req is successful
   if (response.ok) {
     // redirect user to dashboard
-    document.location.replace("/dashboard/");
+    document.location.replace("/dashboard");
     // req is unsuccessful, throw error alert
   } else {
     alert(response.statusText);
@@ -28,4 +28,4 @@ async function editFormEventHandler(event) {
 
 document
   .querySelector(".edit-post-form")
-  .addEventListener("submit", editFormHandler);
+  .addEventListener("submit", editFormEventHandler);
