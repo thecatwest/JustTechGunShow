@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {User, Post, Comment} = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get all posts
 router.get('/', (req, res) => {
@@ -71,12 +72,11 @@ router.get('/:id', (req, res) => {
 });
 
 // create post
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Post.create({
-        title: req.body.title,
+                title: req.body.title,
         contents: req.body.contents,
-        user_id: req.body.user_id,
-        //user_id: req.session.user_id (when sessions and login is added)
+        user_id: req.session.user_id,
         category_id: req.body.category_id
     })
     .then(postData => res.json(postData))
@@ -87,7 +87,7 @@ router.post('/', (req, res) => {
 });
 
 // update a post based off its id
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
             title: req.body.title,
@@ -113,7 +113,7 @@ router.put('/:id', (req, res) => {
 });
 
 // delete a post by id
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
         where: {
             id: req.params.id

@@ -13,7 +13,7 @@ async function deleteFormEventHandler(event) {
   // if delete method req is successful
   if (response.ok) {
     // redirect user to dashboard
-    document.location.replace("/dashboard/");
+    document.location.replace("/dashboard");
     //   if req unsuccessful, throw error alert
   } else {
     alert(response.statusText);

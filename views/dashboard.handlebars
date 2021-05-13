@@ -1,29 +1,28 @@
 {{!-- form to create new post --}}
-<section>
+<section class="pb-3">
     <h2>Create New Workout Post</h2>
 
     <form class="new-post-form">
-        <div>
+        <div class="pb-3">
             <label for="post-title">Title</label>
             <input type="text" id="post-title" name="post-title" />
         </div>
-        <div>
+        <div class="pb-3">
             <label for="post-text">Describe your workout</label>
             <input id="post-text" name="post-text" />
         </div>
-        <button type="submit" class="btn">Create Workout Post</button>
+        <button type="submit">Create Workout Post</button>
     </form>
 </section>
 
 {{!-- if user has posts, display posts with option to edit --}}
 {{#if posts.length}}
-<section>
+<section class='mb-5'>
     <h2>Your Workout Posts</h2>
     <ol>
         {{#each posts as |post|}}
         <li>
             {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit this post</a>
         </li>
         {{/each}}
     </ol>
