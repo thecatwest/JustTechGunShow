@@ -45,3 +45,8 @@ button {
 .hero-p {
     color: #E5E5E5;
 }
+
+/* this is for the yt video */
+.paginate {
+    margin-right: 5px;
+}
