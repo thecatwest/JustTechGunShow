@@ -42,3 +42,10 @@
 #### *MySQL
 #### *YouTube API (not working) 
 
+## Contributing Members 
+#### The Cat West 
+#### * https://github.com/thecatwest
+#### Danger Bear AZ 
+#### * https://github.com/DangerBearAZ
+#### Spencer Moyer 22
+#### * https://github.com/spencermoyer22
