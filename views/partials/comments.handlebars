@@ -1,13 +1,15 @@
+<h3 class='pt-3'>Comments</h3>
+
 {{!-- partial for comments --}}
 <div class="comments mb-4">
   {{!-- use #each helper and this to iterate over comments array --}}
   {{#each this}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{format_date created_at}}
-    </div>
+  <section class="comment pt-3">
     <div class="text">
       {{comment_text}}
+    </div>
+    <div class="meta">
+      {{user.username}} on {{format_date created_at}}
     </div>
   </section>
   {{/each}}
