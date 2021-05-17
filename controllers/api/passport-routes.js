@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth')
+var passport = require('passport')
 
 router.post('/login',
     passport.authenticate('local'),
@@ -124,7 +125,7 @@ router.get('/auth/twitter/callback',
 //   the user to google.com.  After authorization, Google will redirect the user
 //   back to this application at /auth/google/callback
 router.get('/auth/google',
-    passport.authenticate('google', { scope: 'https://www.google.com/m8/feeds' });
+    passport.authenticate('google', { scope: 'https://www.google.com/m8/feeds' }));
 
 // GET /auth/google/callback
 //   Use passport.authenticate() as route middleware to authenticate the
