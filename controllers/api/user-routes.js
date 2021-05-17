@@ -108,6 +108,8 @@ router.post('/logout', withAuth, (req, res) => {
     }
 });
 
+
+
 router.put('/:id', (req, res) => {
     User.update(req.body, {
         individualHooks: true,

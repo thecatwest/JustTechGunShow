@@ -33,6 +33,18 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(require('./controllers/'));
 
+///midle ware for passport 
+app.configure(function() {
+  app.use(express.static('public'));
+  app.use(express.cookieParser());
+  app.use(express.bodyParser());
+  app.use(express.session({ secret: 'cat claire spencer' }));
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(app.router);
+});
+
+
 //waiting on db 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
