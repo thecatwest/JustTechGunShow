@@ -1,33 +1,56 @@
-<form class="login-form">
-  <div class="mb-3">
-    <label for="email-login" class="form-label">email:</label>
-    <input type="email" id="email-login" class="form-control" placeholder="name@example.com" />
+<div class='container'>
+  <div class='row d-flex justify-content-center'>
+    <div class='col-6'>
+      <form class="login-form">
+        <div class="mb-3">
+          <label for="email-login" class="form-label">email:</label>
+          <input type="email" id="email-login" class="form-control" placeholder="name@example.com" />
+        </div>
+        <div class="mb-3">
+          <label for="password-login" class="form-label">password:</label>
+          <input type="password" id="password-login" class="form-control" />
+        </div>
+        <div class="mb-3 d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary mx-3">login</button>
+          <button type="button" class="btn btn-primary mx-3" data-toggle="modal" data-target="#signupModal">sign up</button>
+        </div>
+      </form>
+    </div>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="password-login" class="form-label">password:</label>
-    <input type="password" id="password-login" class="form-control" />
-  </div>
-  <div class="mb-3">
-    <button type="submit" class="btn btn-primary mb-3">login</button>
-  </div>
-</form>
+</div>
 
-<form class="signup-form">
-  <div class="mb-3">
-    <label for="username-signup" class="form-label">username:</label>
-    <input type="text" id="username-signup" class="form-control"  placeholder="username" />
+<div class="modal fade" id='signupModal' tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Create Your Account</h5>
+        <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="signup-form">
+          <div class="mb-3">
+            <label for="username-signup" class="form-label">username:</label>
+            <input type="text" id="username-signup" class="form-control" placeholder="username" />
+          </div>
+          <div class="mb-3">
+            <label for="email-signup" class="form-label">email:</label>
+            <input type="email" id="email-signup" class="form-control" placeholder="name@example.com" />
+          </div>
+          <div class="mb-3">
+            <label for="password-signup" class="form-label">password:</label>
+            <input type="password" id="password-signup" class="form-control" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">create account</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="email-signup" class="form-label">email:</label>
-    <input type="email" id="email-signup" class="form-control" placeholder="name@example.com"/>
-  </div>
-  <div class="mb-3">
-    <label for="password-signup" class="form-label">password:</label>
-    <input type="password" id="password-signup" class="form-control" />
-  </div>
-  <div class="mb-3">
-    <button type="submit" class="btn btn-primary mb-3">signup</button>
-  </div>
-</form>
+</div>
 
 <script src="/javascript/login.js"></script>
