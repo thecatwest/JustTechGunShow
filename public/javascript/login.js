@@ -54,6 +54,10 @@ async function loginFormEventHandler(event) {
   }
 }
 
+document.querySelector('.btn-create').addEventListener('click', () => {
+  $('#signupModal').modal('hide')
+});
+
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormEventHandler);
