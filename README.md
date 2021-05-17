@@ -33,7 +33,7 @@
 #### When I need extra motivation or a reference video (not working) 
 #### I can search for YouTube videos in the App
 
-#### Technologies Used 
+## Technologies Used 
 #### *Bcrypt 
 #### *Sequelize 
 #### *Dotenv
