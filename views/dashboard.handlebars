@@ -1,33 +1,40 @@
-{{!-- form to create new post --}}
-<section class="pb-3">
-    <h2>Create New Workout Post</h2>
-
-    <form class="new-post-form">
-        <div class="pb-3">
-            <label for="post-title">Title</label>
-            <input type="text" id="post-title" name="post-title" />
+<div class='container'>
+    <div class='row'>
+        <div class='col-xl-6'>
+            {{!-- form to create new post --}}
+            <h2 style='text-align: center'>Create New Post</h2>
+            <section>
+                <form class="new-post-form">
+                    <div class="pb-3">
+                        <label for="post-title" class='d-block'>Title</label>
+                        <input type="text" id="post-title" name="post-title" style='width: 75%;'/>
+                    </div>
+                    <div class="pb-3">
+                        <label for="post-text" class='d-block'>Write</label>
+                        <textarea id="post-text" name="post-text" style='width: 75%;' cols="50" rows="7"></textarea>
+                    </div>
+                    <button class='btn' type="submit">Create Post</button>
+                </form>
+            </section>
         </div>
-        <div class="pb-3">
-            <label for="post-text">Describe your workout</label>
-            <input id="post-text" name="post-text" />
+        <div class="col-xl-6 col-lg-9">
+            {{!-- if user has posts, display posts with option to edit --}}
+            {{#if posts.length}}
+            <section class='mb-5'>
+                <h2 style='text-align: center'>Your Posts</h2>
+                <ul style='list-style-type: none'>
+                    {{#each posts as |post|}}
+                    {{!-- <li> --}}
+                        {{> post-info post}}
+                    {{!-- </li> --}}
+                    {{/each}}
+                </ul>
+            </section>
+            {{/if}}
         </div>
-        <button type="submit">Create Workout Post</button>
-    </form>
-</section>
+    </div>
 
-{{!-- if user has posts, display posts with option to edit --}}
-{{#if posts.length}}
-<section class='mb-5'>
-    <h2>Your Workout Posts</h2>
-    <ol>
-        {{#each posts as |post|}}
-        <li>
-            {{> post-info post}}
-        </li>
-        {{/each}}
-    </ol>
-</section>
-{{/if}}
+</div>
 
 {{! you tube lives here }}
 

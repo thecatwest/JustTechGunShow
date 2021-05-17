@@ -1,29 +1,31 @@
-<article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Workout Post
-  </h2>
-  <form class="edit-post-form">
-    <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
-      <div>
-        <textarea name="post-text" value="{{post.contents}}" cols="50" rows="7"></textarea>
-      </div>
+<div class='container'>
+  <div class='row'>
+    <div class='col-xl-6 d-flex justify-content-center'>
+      <article>
+        <h2>
+          Edit Workout Post
+        </h2>
+        <form class="edit-post-form">
+          <div>
+            <input name="post-title" type="text" value="{{post.title}}" />
+            <div class='my-2'>
+              <textarea name="post-text" value="{{post.contents}}" cols="50" rows="7"></textarea>
+            </div>
+          </div>
+          <button type="submit" class='btn'>save post</button>
+          <button type="button" class="btn delete-post-btn">delete post</button>
+          <a href="/post/{{id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+        </form>
+      </article>
     </div>
-    {{!-- TODO --}}
-    {{!-- Change VOTES to CATEGORIES --}}
-    {{!-- <div>
-      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
-      | --}}
-      <a href="/post/{{id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
-      <button type="submit">Save post</button>
-      <button type="button" class="delete-post-btn">Delete post</button>
-    </div>
-  </form>
-</article>
+    <div class='col'>
+    {{!-- use comments partial to display comments --}}
+    {{> comments post.comments}}
 
-{{!-- use comments partial to display comments --}}
-{{> comments post.comments}}
+  </div>
+  </div>
+</div>
+
 
 {{!-- link front-end JS files --}}
 <script src="/javascript/edit-post.js"></script>

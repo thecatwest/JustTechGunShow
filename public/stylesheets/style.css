@@ -27,11 +27,16 @@ footer {
     text-align: center;
 }
 
+.card-header {
+    background-color: #14213D;
+    color: white;
+}
+
 .nav-link {
     color: #14213D;
 }
 
-button {
+.btn {
     background: #FCA311;
     border: #14213D;
     color: #14213D;

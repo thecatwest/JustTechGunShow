@@ -2,15 +2,14 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
-
 {{!-- display form for adding new, and listing current, comments --}}
-<form class="comment-form px-4 mx-2 pt-5">
+<form class="comment-form">
   <div>
     <textarea name="comment-body" cols="50" rows="7"></textarea>
   </div>
 
   <div>
-    <button type="submit" class="comment-form-btn">add new comment</button>
+    <button type="submit" class="btn comment-form-btn">add new comment</button>
   </div>
 </form>
 {{/if}}

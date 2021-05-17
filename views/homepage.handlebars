@@ -1,18 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-2">
-      <div class="card">
-        <img class="card-img" src="https://placebear.com/640/360" alt="Fuzzy Wuzzy was a bear">
-        <div class="card-img-overlay" style='pointer-events:none'></div>
-          <ol class="post-list">
-            {{#each posts as |post|}}
-            <li>
-              {{!-- use partial to pull data from post-info.hbs post --}}
-              {{> post-info post }}
-            </li>
-            {{/each}}
-          </ol>
-        </div>
-      </div>
-    </div>
+    <h2 style='text-align: center'>Your Feed</h2>
+    <section class='mb-5 d-flex justify-content-center'>
+      <div class="col-lg-6">
+        <ul style='list-style-type: none'>
+          {{#each posts as |post|}}
+          {{!-- <li> --}}
+            {{> post-info post}}
+            {{!-- </li> --}}
+          {{/each}}
+        </ul>
+    </section>
+  </div>
+</div>
 </div>
