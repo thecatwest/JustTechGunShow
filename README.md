@@ -1,25 +1,10 @@
 # JustTechGunShow
 
-## A web application group project
+## Description
+This website is a social media application. It is intended for users who enjoy a healthy workout to discuss different factors of a healthy lifestyle such as diet and workouts.
 
-## Project Requirements
-
-### To create a full-stack application that works with real-world data
-
-#### * Use Node.js and Express.js to create a RESTful API.
-#### * Use Handlebars.js as the template engine.
-#### * Use MySQL and the Sequelize ORM for the database.
-#### * Have both GET and POST routes for retrieving and adding new data.
-#### * Be deployed using Heroku (with data).
-#### * Use at least one new library, package, or technology that we haven’t discussed.
-#### * Have a polished UI.
-#### * Be responsive.
-#### * Be interactive (i.e., accept and respond to user input).
-#### * Have a folder structure that meets the MVC paradigm.
-#### * Include authentication (express-session and cookies).Include authentication (express-session and cookies).
-#### * Protect API keys and sensitive information with environment variables.
-#### * Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class/id naming conventions, indentation, quality comments
-#### * Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+## My Role
+My role in this project was writing the Express API routes. I also assisted in writing the MySQL classes using Sequelize. I used the CRUD methods to create routes that allow creating signing up and logging in. I also wrote routes that allows users to create and update posts. They can also comment on posts. Finally, I also 
 
 ## Deployed Link
 #### Heroku https://thawing-plains-49978.herokuapp.com/
